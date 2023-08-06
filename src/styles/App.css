@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Roboto+Mono:wght@500&family=Ubuntu:wght@300&display=swap&family=M+PLUS+Code+Latin:wght@500&display=swap');
+.header{
+  position: fixed;
+  width: 100%;
+  background-color: #2a475a;
+  min-height: 10%;
+  z-index: 1000;
+}
+.headerAlign{
+  justify-content: right !important;
+}
+.headerFont{
+  color:  #ffffff ;
+  font-family: 'M PLUS Code Latin', sans-serif;
+  margin-left: 10%;
+}
