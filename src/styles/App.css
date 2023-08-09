@@ -1,40 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Roboto+Mono:wght@500&family=Ubuntu:wght@300&display=swap&family=M+PLUS+Code+Latin:wght@500&display=swap');
-.header{
-  position: fixed;
-  width: 100%;
-  background-color: #344144;
-  min-height: 12%;
-  z-index: 1000;
-}
-.logo{
-  margin-top: 5%;
-  border-radius: 10%;
-  width: auto;
-  height: 5em;
-}
-.headerAlign{
-  justify-content: right !important;
-}
-.headerFont{
-  color:  #ffffff !important; 
-  font-family: 'M PLUS Code Latin', sans-serif;
-  margin-left: 10%;
-}
-.fundoMainFrame{
+.fundoMainFrame {
   background-color: #374c52;
-}
-.mainFrame{
-    opacity: 0.5;
-    padding-top: 12%;
-    padding-bottom: 17%;
-    background-image: url("../img/mainFrame.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  opacity: 1;
+  padding-top: 12em;
+  padding-bottom: 10em;
+  background-image: url("../img/mainFrame.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .textos {
-  padding-top: 12%;
-  text-align: center;
-  color: #ffffff;
+  color: #ffffff !important;
   z-index: 1000;
+  text-align: center;
 }
+.btnCTA{
+  margin-top: 4em;
+}
+
