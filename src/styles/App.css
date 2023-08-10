@@ -16,48 +16,46 @@
 .btnCTA{
   margin-top: 4em;
 }
-
-
-
-
-
-.linha{
-  padding-top: 5em;
-  padding-bottom: 3%;
+.projetosContainer h3{
+  text-align: center;
+  font-weight: 300;
+  padding: 3em;
 }
-.colunaTexto{
-  text-align: justify;
-  
+.fundoProj{
+  background-color: #374c52 ;
+  opacity: 0.5;
 }
-.colunaFoto{
-  text-align: end !important;
-}
-.colunaTexto h3{
-  font-family: 'M PLUS Code Latin', sans-serif;
-  font-size: 2em;
-}
-.colunaTexto p{
-  font-family:  Arial, Helvetica, sans-serif;
-  padding-bottom: 1em;
+.linhas{
   padding-top: 1em;
-  font-size: 1.3em;
+  padding-bottom: 6em;
+  text-align: center;
+}
+.colunaTxt{
+  text-align: justify;
 }
 .btnSaibaMais{
   text-align: center;
   padding: 0.5em;
 }
-.btn-info{
-  background-color: #5188ad  !important;
-  color: #ffffff ;
-  border: #5188ad ;
-  border-radius: 1em;
-  width: 15em;
-  height: 4em;
-  font-size: 1em;
+.colunaImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.btn-info:hover{
-  background-color: #2a475a  !important;
-  color: #ffffff ;
-  border: #2a475a ;
-  transition-duration: 0.5s;
+.colunaImg .img{
+  height: auto;
+  max-width: 400px;
+  min-width: none;
+  border-radius: 1em;
+}
+.sobreContainer{
+  background-color: #374c52;
+  margin-top: 2em;
+  border-radius: 1em;
+}
+.sobreContainer h3{
+  text-align: center;
+  font-weight: 300;
+  padding: 3em;
+  color: #ffffff;
 }

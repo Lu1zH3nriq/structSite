@@ -5,6 +5,8 @@ import "../styles/App.css";
 
 import Header from "../components/header";
 
+import fotoTeste from "../img/logo_struct.png";
+
 function Home() {
   return (
     <>
@@ -28,10 +30,10 @@ function Home() {
         <ReactBootstrap.Container>
           
           <div className="projetosContainer">
-            <h3>Projetos</h3>
+            <h3>Serviços</h3>
             <ReactBootstrap.Row className="linhas">
               <ReactBootstrap.Col className="colunaTxt">
-                <h2>Sites e Landing Pages</h2>
+                <h2>Consultoria</h2>
                 <p>
                   Desenvolvi sites institucionais e landing pages persuasivas
                   com intuito de levar ao usuario uma experiência visual limpa,
@@ -52,9 +54,10 @@ function Home() {
               </ReactBootstrap.Col>
               <ReactBootstrap.Col className="colunaImg">
                 <ReactBootstrap.Image
-                  src=""
-                  alt=""
-                  title=""
+                  className="img"
+                  src={fotoTeste}
+                  alt=" Foto 1"
+                  title=" Foto 1"
                 />
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
@@ -62,13 +65,14 @@ function Home() {
             <ReactBootstrap.Row className="linhas ">
               <ReactBootstrap.Col className="colunaImg">
                 <ReactBootstrap.Image
-                  src=""
-                  alt=""
-                  tite=""
+                  className="img"
+                  src={fotoTeste}
+                  alt="Foto 2"
+                  tite=" Foto 2"
                 />l
               </ReactBootstrap.Col>
               <ReactBootstrap.Col className="colunaTxt">
-                <h2>Aplicações Web</h2>
+                <h2>Desenvolvimento de Projetos</h2>
                 <p>
                   Desenvolvi um aplicativo de gestão de bares e restaurantes com
                   controle de estoque e vendas, com uma estrutura de comandas. O
@@ -91,7 +95,7 @@ function Home() {
 
             <ReactBootstrap.Row className="linhas">
               <ReactBootstrap.Col className="colunaTxt">
-                <h2>Desenvolvimento Mobile</h2>
+                <h2>Fiscalização de Obras</h2>
                 <p>
                   Desenvolvi um aplicativo mobile para gestão de obras de uma
                   construtora e seus respectivos gastos com materiais e
@@ -110,9 +114,10 @@ function Home() {
               </ReactBootstrap.Col>
               <ReactBootstrap.Col className="colunaImg">
                 <ReactBootstrap.Image
-                  src=" "
-                  alt=" "
-                  title=" "
+                  className="img"
+                  src={fotoTeste}
+                  alt=" Foto 3 "
+                  title=" Foto 3"
                 />
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
@@ -121,31 +126,22 @@ function Home() {
       </section>
 
       <section id="sobre">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <ReactBootstrap.Container>
+          
+          <div className="sobreContainer">
+            <h3>Quem somos</h3>
+            <ReactBootstrap.Row>
+              <ReactBootstrap.Col>
+                  <div>
+                    
+                  </div>
+              </ReactBootstrap.Col>
+              <ReactBootstrap.Col>
+                
+              </ReactBootstrap.Col>
+            </ReactBootstrap.Row>
+          </div>
+        </ReactBootstrap.Container>
       </section>
     </>
   );
