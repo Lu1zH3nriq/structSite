@@ -1,7 +1,7 @@
 .fundoMainFrame {
   background-color: #374c52;
   opacity: 1;
-  padding-top: 12em;
+  padding-top: 14em;
   padding-bottom: 10em;
   background-image: url("../img/mainFrame.png");
   background-repeat: no-repeat;
@@ -16,14 +16,10 @@
 .btnCTA{
   margin-top: 4em;
 }
-.projetosContainer h3{
+.projetosContainer h3, .avContainer h3{
   text-align: center;
   font-weight: 300;
   padding: 3em;
-}
-.fundoProj{
-  background-color: #374c52 ;
-  opacity: 0.5;
 }
 .linhas{
   padding-top: 1em;
@@ -37,25 +33,48 @@
   text-align: center;
   padding: 0.5em;
 }
-.colunaImg{
+.colunaImgDir{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.colunaImgEsq{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.colunaImgDir .img, .colunaImgEsq .img{
+  height: auto;
+  max-width: 500px;
+  min-width: 0px;
+  border-radius: 1em;
+}
+.imgSobre{
+  height: auto;
+  max-width: 50%;
+  border-radius: 50%;
+}
+.linhaSobre{
+  padding-top: 1em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+.colunaImgSobre{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.colunaImg .img{
-  height: auto;
-  max-width: 400px;
-  min-width: none;
-  border-radius: 1em;
-}
 .sobreContainer{
   background-color: #374c52;
   margin-top: 2em;
-  border-radius: 1em;
 }
 .sobreContainer h3{
   text-align: center;
   font-weight: 300;
   padding: 3em;
+  color: #ffffff;
+}
+.colunaTxtSobre{
+  text-align: justify;
   color: #ffffff;
 }

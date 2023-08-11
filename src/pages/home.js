@@ -5,12 +5,17 @@ import "../styles/App.css";
 
 import Header from "../components/header";
 
-import fotoTeste from "../img/logo_struct.png";
+import consultoriaImg from "../img/consultoria.jpg";
+import projetosImg from "../img/projetos.jpg";
+import fiscalizacaoImg from "../img/fiscalizacao.jpg";
+import fotoEmpresa from "../img/fotoEmpresa.jpg";
 
 function Home() {
   return (
     <>
       <Header></Header>
+
+
       <section id="home">
         <div className="fundoMainFrame">
           <ReactBootstrap.Container>
@@ -28,21 +33,17 @@ function Home() {
 
       <section id="serviços">
         <ReactBootstrap.Container>
-          
+
           <div className="projetosContainer">
+
             <h3>Serviços</h3>
+
             <ReactBootstrap.Row className="linhas">
+
+
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Consultoria</h2>
-                <p>
-                  Desenvolvi sites institucionais e landing pages persuasivas
-                  com intuito de levar ao usuario uma experiência visual limpa,
-                  simples que traga conforto em sua navegação. Desenvolvido com
-                  JavaScript e elementos de HMTL e CSS, além de utilizar
-                  bibliotecas para deixar tudo responsivo e se adaptar a
-                  qualquer tamanho de tela. Tenho experiência em framworks
-                  voltados para o frontend como React e Angular para estruturar
-                  meus projetos e torná-los mais fluidos.
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
                 <div className="btnSaibaMais">
                   <ReactBootstrap.Button
@@ -52,36 +53,36 @@ function Home() {
                   </ReactBootstrap.Button>
                 </div>
               </ReactBootstrap.Col>
-              <ReactBootstrap.Col className="colunaImg">
+
+
+              <ReactBootstrap.Col className="colunaImgDir">
                 <ReactBootstrap.Image
                   className="img"
-                  src={fotoTeste}
+                  src={consultoriaImg}
                   alt=" Foto 1"
                   title=" Foto 1"
                 />
               </ReactBootstrap.Col>
+
+
             </ReactBootstrap.Row>
 
             <ReactBootstrap.Row className="linhas ">
-              <ReactBootstrap.Col className="colunaImg">
+
+              <ReactBootstrap.Col className="colunaImgEsq">
                 <ReactBootstrap.Image
                   className="img"
-                  src={fotoTeste}
+                  src={projetosImg}
                   alt="Foto 2"
                   tite=" Foto 2"
-                />l
+                />
               </ReactBootstrap.Col>
+
+
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Desenvolvimento de Projetos</h2>
                 <p>
-                  Desenvolvi um aplicativo de gestão de bares e restaurantes com
-                  controle de estoque e vendas, com uma estrutura de comandas. O
-                  software foi desenvolvido com React usando arquitetura MVC,
-                  junto com banco de dados relacional MySQL. E também um backend
-                  escrito em NodeJS para integrar dois sistemas, um portal de
-                  gestão de cotabilidade e um ERP. O projeto foi desenvolvido em
-                  NodeJS usando Express e o banco de dados não relacional
-                  MongoDB.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
                 <div className="btnSaibaMais">
                   <ReactBootstrap.Button
@@ -91,18 +92,15 @@ function Home() {
                   </ReactBootstrap.Button>
                 </div>
               </ReactBootstrap.Col>
+
             </ReactBootstrap.Row>
 
             <ReactBootstrap.Row className="linhas">
+
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Fiscalização de Obras</h2>
                 <p>
-                  Desenvolvi um aplicativo mobile para gestão de obras de uma
-                  construtora e seus respectivos gastos com materiais e
-                  ferramentas, com uma estrutura parecida com centro de custos
-                  de cada obra. O software foi desenvolvido com React Native e
-                  usando arquitetura MVC, junto com um banco de dados não
-                  relacional MongoDB.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
                 <div className="btnSaibaMais">
                   <ReactBootstrap.Button
@@ -112,36 +110,67 @@ function Home() {
                   </ReactBootstrap.Button>
                 </div>
               </ReactBootstrap.Col>
-              <ReactBootstrap.Col className="colunaImg">
+
+
+              <ReactBootstrap.Col className="colunaImgDir">
                 <ReactBootstrap.Image
                   className="img"
-                  src={fotoTeste}
+                  src={fiscalizacaoImg}
                   alt=" Foto 3 "
                   title=" Foto 3"
                 />
               </ReactBootstrap.Col>
+
             </ReactBootstrap.Row>
+
           </div>
         </ReactBootstrap.Container>
       </section>
 
       <section id="sobre">
-        <ReactBootstrap.Container>
-          
-          <div className="sobreContainer">
+
+        <div className="sobreContainer">
+          <ReactBootstrap.Container>
             <h3>Quem somos</h3>
-            <ReactBootstrap.Row>
-              <ReactBootstrap.Col>
-                  <div>
-                    
-                  </div>
+
+            <ReactBootstrap.Row className="linhaSobre">
+
+
+              <ReactBootstrap.Col className="colunaTxtSobre">
+                <h2>Consultoria</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
               </ReactBootstrap.Col>
-              <ReactBootstrap.Col>
-                
+
+
+              <ReactBootstrap.Col className="colunaImgSobre">
+                <ReactBootstrap.Image
+                  className="imgSobre"
+                  src={fotoEmpresa}
+                  alt=" Foto Empresa"
+                  title=" Foto Empresa"
+                />
               </ReactBootstrap.Col>
+
+
             </ReactBootstrap.Row>
-          </div>
-        </ReactBootstrap.Container>
+
+
+          </ReactBootstrap.Container>
+
+        </div>
+
+      </section>
+
+      <section id="avaliacoes">
+
+        <div className="avContainer">
+          <ReactBootstrap.Container>
+            <h3>Nossos Clientes</h3>
+          </ReactBootstrap.Container>
+            
+        </div>
+
       </section>
     </>
   );
