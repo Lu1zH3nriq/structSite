@@ -1,8 +1,8 @@
 .header {
     position: fixed;
     width: 100%;
-    background-color: #636464;
-    min-height: 10%;
+    background-color: #354044;
+    min-height: 8%;
     z-index: 1000;
   }
   .logo {
