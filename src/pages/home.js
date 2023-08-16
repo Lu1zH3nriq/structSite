@@ -244,7 +244,7 @@ function Home() {
 
       <div className="btnWhatsapp">
         <a
-          href="https://wa.me/5531991213427?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
+          href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
           target="blank"
         >
           <img
@@ -255,6 +255,11 @@ function Home() {
           />
         </a>
       </div>
+
+
+      <footer>
+        
+      </footer>
     </>
   );
 }
