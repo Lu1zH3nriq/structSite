@@ -12,9 +12,15 @@ import fotoEmpresa from "../img/fotoEmpresa.jpg";
 import fotoDepoimento1 from "../img/FotoDepoimento1.jpg";
 import fotoDepoimento2 from "../img/FotoDepoimento3.jpg";
 import fotoDepoimento3 from "../img/FotoDepoimento2.jpg";
-import whatsapp from "../img/whatsapp2.png";
+import whatsapp from "../img/whatsapp.png";
 
 function Home() {
+  const anoAtual = new Date().getFullYear();
+
+
+
+
+
   return (
     <>
       <Header></Header>
@@ -180,7 +186,7 @@ function Home() {
 
             <div className="depoimentos">
               <ReactBootstrap.Row className="linhaDepoimentos">
-                <ReactBootstrap.Col className="colunaDepoimentos">
+                <ReactBootstrap.Col>
                   <div className="depoimento">
                     <ReactBootstrap.Image
                       src={fotoDepoimento1}
@@ -242,7 +248,7 @@ function Home() {
         </div>
       </section>
 
-      <div className="btnWhatsapp">
+      <div>
         <a
           href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
           target="blank"
@@ -258,7 +264,35 @@ function Home() {
 
 
       <footer>
-        
+        <div className="footer">
+          <ReactBootstrap.Container>
+            <div className="contentFooter">
+              <ReactBootstrap.Row className="linhaFooter">
+                <ReactBootstrap.Col className="colunaFooter">
+                  <h5>Struct Engenharia</h5>
+                  <h5>LOGO</h5>
+                  <p>&copy; {anoAtual} Struct - Engenharias. Todos os direitos reservados.</p>
+                </ReactBootstrap.Col>
+                <ReactBootstrap.Col className="colunaFooter">
+                  <h5>Contato</h5>
+                  <p>email.email@email.com</p>
+                  <p>(XX) XXXX - XXXX </p>
+                  <p>Rua teste, 981, Teste</p>
+                  <p>Exemplo - MG</p>
+                </ReactBootstrap.Col>
+                <ReactBootstrap.Col className="colunaFooter">
+                  <h5>Social</h5>
+                  <div className="socialIcons">
+                    <p>insta</p>
+                    <p>linkedIn</p>
+                    <p>face</p>
+                    <p>whatsapp</p>
+                  </div>
+                </ReactBootstrap.Col>
+              </ReactBootstrap.Row>
+            </div>
+          </ReactBootstrap.Container>
+        </div>
       </footer>
     </>
   );

@@ -1,6 +1,4 @@
 .fundoMainFrame {
-  background-color: #374c52;
-  opacity: 1;
   padding-top: 14em;
   padding-bottom: 10em;
   background-image: url("../img/mainFrame.png");
@@ -35,12 +33,12 @@
 }
 .colunaImgDir{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .colunaImgEsq{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .colunaImgDir .img, .colunaImgEsq .img{
@@ -104,11 +102,6 @@
 .depoimento p{
   text-align: justify;
 }
-.btnWhatsapp{
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
 .fixedButton{
   position: fixed;
   bottom: 20px; /* Distância do fundo */
@@ -116,4 +109,18 @@
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+.footer{
+  background-color: black;
+  width: 100%;
+  min-height: 300px;
+}
+.linhaFooter{
+  padding-top: 4em;
+}
+.colunaFooter{
+  text-align: justify;
+}
+.colunaFooter h5, .colunaFooter p{
+  color: #ffffff;
 }
