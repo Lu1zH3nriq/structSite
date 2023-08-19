@@ -1,8 +1,12 @@
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootstrap from "react-bootstrap";
 import "../styles/App.css";
 
+import ScrollReveal from "scrollreveal";
+
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 import consultoriaImg from "../img/consultoria.jpg";
 import projetosImg from "../img/projetos.jpg";
@@ -12,14 +16,78 @@ import fotoEmpresa from "../img/fotoEmpresa.jpg";
 import fotoDepoimento1 from "../img/FotoDepoimento1.jpg";
 import fotoDepoimento2 from "../img/FotoDepoimento3.jpg";
 import fotoDepoimento3 from "../img/FotoDepoimento2.jpg";
-import whatsapp from "../img/whatsapp.png";
+import whatsapp from "../img/whatsapp2.png";
 
 function Home() {
-  const anoAtual = new Date().getFullYear();
+  useEffect(() => {
+    const animacaoInicio = ScrollReveal({
+      origin: "bottom",
+      distance: "30px",
+      duration: 1000,
+      delay: 200,
+      opacity: 0,
+      easing: "ease",
+      reset: "true",
+    });
+
+    animacaoInicio.reveal(".textos");
+  }, []); 
 
 
+  useEffect(() => {
+    const animacaoServicos = ScrollReveal({
+      origin: "bottom",
+      distance: "30px",
+      duration: 1000,
+      delay: 200,
+      opacity: 0,
+      easing: "ease",
+      reset: "true",
+    });
+
+    animacaoServicos.reveal(".linhas");
+  }, []);
 
 
+  useEffect(() => {
+    const animacaoDepoimentos = ScrollReveal({
+      origin: "bottom",
+      distance: "30px",
+      duration: 900,
+      delay: 200,
+      opacity: 0,
+      easing: "ease",
+      reset: "true",
+    });
+
+    animacaoDepoimentos.reveal(".dep1");
+  }, []);
+  useEffect(() => {
+    const animacaoDepoimentos = ScrollReveal({
+      origin: "bottom",
+      distance: "30px",
+      duration: 900,
+      delay: 300,
+      opacity: 0,
+      easing: "ease",
+      reset: "true",
+    });
+
+    animacaoDepoimentos.reveal(".dep2");
+  }, []);
+  useEffect(() => {
+    const animacaoDepoimentos = ScrollReveal({
+      origin: "bottom",
+      distance: "30px",
+      duration: 900,
+      delay: 400,
+      opacity: 0,
+      easing: "ease",
+      reset: "true",
+    });
+
+    animacaoDepoimentos.reveal(".dep3");
+  }, []);
 
   return (
     <>
@@ -187,7 +255,7 @@ function Home() {
             <div className="depoimentos">
               <ReactBootstrap.Row className="linhaDepoimentos">
                 <ReactBootstrap.Col>
-                  <div className="depoimento">
+                  <div className="depoimento dep1">
                     <ReactBootstrap.Image
                       src={fotoDepoimento1}
                       alt="Foto Depoimento 1"
@@ -206,7 +274,7 @@ function Home() {
                 </ReactBootstrap.Col>
 
                 <ReactBootstrap.Col>
-                  <div className="depoimento">
+                  <div className="depoimento dep2">
                     <ReactBootstrap.Image
                       src={fotoDepoimento2}
                       alt="Foto Depoimento 2"
@@ -225,7 +293,7 @@ function Home() {
                 </ReactBootstrap.Col>
 
                 <ReactBootstrap.Col>
-                  <div className="depoimento">
+                  <div className="depoimento dep3">
                     <ReactBootstrap.Image
                       src={fotoDepoimento3}
                       alt="Foto Depoimento 3"
@@ -262,38 +330,7 @@ function Home() {
         </a>
       </div>
 
-
-      <footer>
-        <div className="footer">
-          <ReactBootstrap.Container>
-            <div className="contentFooter">
-              <ReactBootstrap.Row className="linhaFooter">
-                <ReactBootstrap.Col className="colunaFooter">
-                  <h5>Struct Engenharia</h5>
-                  <h5>LOGO</h5>
-                  <p>&copy; {anoAtual} Struct - Engenharias. Todos os direitos reservados.</p>
-                </ReactBootstrap.Col>
-                <ReactBootstrap.Col className="colunaFooter">
-                  <h5>Contato</h5>
-                  <p>email.email@email.com</p>
-                  <p>(XX) XXXX - XXXX </p>
-                  <p>Rua teste, 981, Teste</p>
-                  <p>Exemplo - MG</p>
-                </ReactBootstrap.Col>
-                <ReactBootstrap.Col className="colunaFooter">
-                  <h5>Social</h5>
-                  <div className="socialIcons">
-                    <p>insta</p>
-                    <p>linkedIn</p>
-                    <p>face</p>
-                    <p>whatsapp</p>
-                  </div>
-                </ReactBootstrap.Col>
-              </ReactBootstrap.Row>
-            </div>
-          </ReactBootstrap.Container>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
   );
 }
