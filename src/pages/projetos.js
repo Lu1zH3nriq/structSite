@@ -6,7 +6,7 @@ import "../styles/App.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import whatsapp from "../img/whatsapp2.png";
+import whatsapp from "../img/whatsapp3.png";
 
 function projetos() {
   return (
@@ -27,8 +27,8 @@ function projetos() {
                       alt="Foto Depoimento 1"
                       title="Foto Depoimento 1"
                     />
-                    <h2>João</h2>
-                    <h5>CEO na empresa ASKDKAS</h5>
+                    <h2>NOME PROJETO</h2>
+                    <h5>OBRA N° 12381</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
@@ -46,8 +46,8 @@ function projetos() {
                       alt="Foto Depoimento 2"
                       title="Foto Depoimento 2"
                     />
-                    <h2>Maria</h2>
-                    <h5>Diretora Executiva na empresa askda</h5>
+                    <h2>NOME PROJETO</h2>
+                    <h5>OBRA N° 12381</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
@@ -57,8 +57,6 @@ function projetos() {
                     </p>
                   </div>
                 </ReactBootstrap.Col>
-
-                
               </ReactBootstrap.Row>
             </div>
           </ReactBootstrap.Container>
@@ -75,8 +73,8 @@ function projetos() {
                       alt="Foto Depoimento 1"
                       title="Foto Depoimento 1"
                     />
-                    <h2>João</h2>
-                    <h5>CEO na empresa ASKDKAS</h5>
+                    <h2>NOME PROJETO</h2>
+                    <h5>OBRA N° 12381</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
@@ -94,8 +92,8 @@ function projetos() {
                       alt="Foto Depoimento 2"
                       title="Foto Depoimento 2"
                     />
-                    <h2>Maria</h2>
-                    <h5>Diretora Executiva na empresa askda</h5>
+                    <h2>NOME PROJETO</h2>
+                    <h5>OBRA N° 12381</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
@@ -113,8 +111,8 @@ function projetos() {
                       alt="Foto Depoimento 3"
                       title="Foto Depoimento 3"
                     />
-                    <h2>José</h2>
-                    <h5>Diretor de projetos na empresa askdk</h5>
+                    <h2>NOME PROJETO</h2>
+                    <h5>OBRA N° 12381</h5>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
@@ -129,6 +127,7 @@ function projetos() {
           </ReactBootstrap.Container>
         </div>
       </section>
+
       <div>
         <a
           href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"

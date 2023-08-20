@@ -16,7 +16,7 @@ import fotoEmpresa from "../img/fotoEmpresa.jpg";
 import fotoDepoimento1 from "../img/FotoDepoimento1.jpg";
 import fotoDepoimento2 from "../img/FotoDepoimento3.jpg";
 import fotoDepoimento3 from "../img/FotoDepoimento2.jpg";
-import whatsapp from "../img/whatsapp2.png";
+import whatsapp from "../img/whatsapp3.png";
 
 function Home() {
   useEffect(() => {
@@ -31,8 +31,7 @@ function Home() {
     });
 
     animacaoInicio.reveal(".textos");
-  }, []); 
-
+  }, []);
 
   useEffect(() => {
     const animacaoServicos = ScrollReveal({
@@ -47,7 +46,6 @@ function Home() {
 
     animacaoServicos.reveal(".linhas");
   }, []);
-
 
   useEffect(() => {
     const animacaoDepoimentos = ScrollReveal({
@@ -219,7 +217,7 @@ function Home() {
 
             <ReactBootstrap.Row className="linhaSobre">
               <ReactBootstrap.Col className="colunaTxtSobre">
-                <h2>Consultoria</h2>
+                <h2>Struct Engenharia</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -231,6 +229,30 @@ function Home() {
                   the release of Letraset sheets containing Lorem Ipsum
                   passages, and more recently with desktop publishing software
                   like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <h2>Missão</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+                <h2>Visão</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+                <h2>Valores</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
                 </p>
               </ReactBootstrap.Col>
 
