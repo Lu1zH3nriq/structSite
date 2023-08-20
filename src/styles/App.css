@@ -86,7 +86,7 @@
   padding-bottom: 6em;
   text-align: center;
 }
-.depoimento{
+.depoimento , .projeto{
   background-color: #e1e1e189;
   padding: 2em 1em 2em 1em;
   border-radius: 1em;
@@ -96,10 +96,10 @@
   max-width: 20em;
   border-radius: 50%;
 }
-.depoimento h5{
+.depoimento h5 , .projeto h5{
   padding: 1em;
 }
-.depoimento p{
+.depoimento p , .projeto p{
   text-align: justify;
 }
 .fixedButton{
@@ -123,4 +123,10 @@
 }
 .colunaFooter h5, .colunaFooter p{
   color: #ffffff;
+}
+
+.projeto img{
+  padding: 2em;
+  max-width: 20em;
+  border-radius: 50%;
 }
