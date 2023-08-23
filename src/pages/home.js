@@ -8,13 +8,13 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 import consultoriaImg from "../img/consultoria.webP";
-import projetosImg from "../img/desenProjetos.webP";
+import projetosImg from "../img/projetos.webP";
 import fiscalizacaoImg from "../img/fiscalizacao.webP";
 import fotoEmpresa from "../img/fotoEmpresa.webP";
 
-import fotoDepoimento1 from "../img/FotoDepoimento1.webP";
-import fotoDepoimento2 from "../img/FotoDepoimento3.webP";
-import fotoDepoimento3 from "../img/FotoDepoimento2.webP";
+import fotoDepoimento1 from "../img/fotoDep1.webP";
+import fotoDepoimento2 from "../img/fotoDep2.webP";
+import fotoDepoimento3 from "../img/fotoDep3.webP";
 import whatsapp from "../img/whatsapp3.webP";
 
 function Home() {
@@ -44,46 +44,6 @@ function Home() {
     });
 
     animacaoServicos.reveal(".linhas");
-  }, []);
-
-  useEffect(() => {
-    const animacaoDepoimentos = ScrollReveal({
-      origin: "bottom",
-      distance: "30px",
-      duration: 900,
-      delay: 200,
-      opacity: 0.5,
-      easing: "ease",
-      reset: "true",
-    });
-
-    animacaoDepoimentos.reveal(".dep1");
-  }, []);
-  useEffect(() => {
-    const animacaoDepoimentos = ScrollReveal({
-      origin: "bottom",
-      distance: "30px",
-      duration: 900,
-      delay: 300,
-      opacity: 0.5,
-      easing: "ease",
-      reset: "true",
-    });
-
-    animacaoDepoimentos.reveal(".dep2");
-  }, []);
-  useEffect(() => {
-    const animacaoDepoimentos = ScrollReveal({
-      origin: "bottom",
-      distance: "30px",
-      duration: 900,
-      delay: 400,
-      opacity: 0.5,
-      easing: "ease",
-      reset: "true",
-    });
-
-    animacaoDepoimentos.reveal(".dep3");
   }, []);
 
   return (
@@ -249,7 +209,7 @@ function Home() {
             <div className="depoimentos">
               <ReactBootstrap.Row className="linhaDepoimentos">
                 <ReactBootstrap.Col>
-                  <div className="depoimento dep1">
+                  <div className="depoimento">
                     <ReactBootstrap.Image
                       src={fotoDepoimento1}
                       alt="Foto Depoimento 1"
@@ -260,15 +220,13 @@ function Home() {
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </ReactBootstrap.Col>
 
                 <ReactBootstrap.Col>
-                  <div className="depoimento dep2">
+                  <div className="depoimento">
                     <ReactBootstrap.Image
                       src={fotoDepoimento2}
                       alt="Foto Depoimento 2"
@@ -279,15 +237,13 @@ function Home() {
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </ReactBootstrap.Col>
 
                 <ReactBootstrap.Col>
-                  <div className="depoimento dep3">
+                  <div className="depoimento">
                     <ReactBootstrap.Image
                       src={fotoDepoimento3}
                       alt="Foto Depoimento 3"
@@ -298,9 +254,7 @@ function Home() {
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </ReactBootstrap.Col>
