@@ -8,7 +8,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 import consultoriaImg from "../img/consultoria.webP";
-import projetosImg from "../img/projetos.webP";
+import projetosImg from "../img/desenProjetos.webP";
 import fiscalizacaoImg from "../img/fiscalizacao.webP";
 import fotoEmpresa from "../img/fotoEmpresa.webP";
 
