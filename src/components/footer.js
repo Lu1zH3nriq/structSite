@@ -38,10 +38,18 @@ function footer() {
               <ReactBootstrap.Col className="colunaFooter">
                 <h5>Social</h5>
                 <div className="socialIcons">
-                  <a href=""><FaInstagram /> Instagram</a>
-                  <a href=""><FaLinkedin /> linkedIn</a>
-                  <a href=""><FaFacebook /> Facebook</a>
-                  <a href=""><FaWhatsapp /> Whatsapp</a>
+                  <a href="https://www.instagram.com/"
+                    target="blank"
+                  ><FaInstagram /> Instagram</a>
+                  <a href="https://br.linkedin.com/"
+                    target="blank"
+                  ><FaLinkedin /> linkedIn</a>
+                  <a href="https://pt-br.facebook.com/login/device-based/regular/login/"
+                    target="blank"
+                  ><FaFacebook /> Facebook</a>
+                  <a href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
+                    target="blank"
+                  ><FaWhatsapp /> Whatsapp</a>
                 </div>
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
