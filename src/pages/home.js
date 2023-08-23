@@ -4,19 +4,18 @@ import * as ReactBootstrap from "react-bootstrap";
 import "../styles/App.css";
 
 import ScrollReveal from "scrollreveal";
-
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import consultoriaImg from "../img/consultoria.jpg";
-import projetosImg from "../img/projetos.jpg";
-import fiscalizacaoImg from "../img/fiscalizacao.jpg";
-import fotoEmpresa from "../img/fotoEmpresa.jpg";
+import consultoriaImg from "../img/consultoria.webP";
+import projetosImg from "../img/projetos.webP";
+import fiscalizacaoImg from "../img/fiscalizacao.webP";
+import fotoEmpresa from "../img/fotoEmpresa.webP";
 
-import fotoDepoimento1 from "../img/FotoDepoimento1.jpg";
-import fotoDepoimento2 from "../img/FotoDepoimento3.jpg";
-import fotoDepoimento3 from "../img/FotoDepoimento2.jpg";
-import whatsapp from "../img/whatsapp3.png";
+import fotoDepoimento1 from "../img/FotoDepoimento1.webP";
+import fotoDepoimento2 from "../img/FotoDepoimento3.webP";
+import fotoDepoimento3 from "../img/FotoDepoimento2.webP";
+import whatsapp from "../img/whatsapp3.webP";
 
 function Home() {
   useEffect(() => {
@@ -24,7 +23,7 @@ function Home() {
       origin: "bottom",
       distance: "30px",
       duration: 1000,
-      delay: 200,
+      delay: 100,
       opacity: 0,
       easing: "ease",
       reset: "true",
@@ -38,7 +37,7 @@ function Home() {
       origin: "bottom",
       distance: "30px",
       duration: 1000,
-      delay: 200,
+      delay: 100,
       opacity: 0,
       easing: "ease",
       reset: "true",
@@ -53,7 +52,7 @@ function Home() {
       distance: "30px",
       duration: 900,
       delay: 200,
-      opacity: 0,
+      opacity: 0.5,
       easing: "ease",
       reset: "true",
     });
@@ -66,7 +65,7 @@ function Home() {
       distance: "30px",
       duration: 900,
       delay: 300,
-      opacity: 0,
+      opacity: 0.5,
       easing: "ease",
       reset: "true",
     });
@@ -79,7 +78,7 @@ function Home() {
       distance: "30px",
       duration: 900,
       delay: 400,
-      opacity: 0,
+      opacity: 0.5,
       easing: "ease",
       reset: "true",
     });
@@ -95,10 +94,10 @@ function Home() {
         <div className="fundoMainFrame">
           <ReactBootstrap.Container>
             <div className="textos">
-              <h4>Texto pequeno de efeito!</h4>
-              <h1>TEXTO GRANDE CHAMATIVO </h1>
-              <h1>Slogam</h1>
-              <ReactBootstrap.Button className="btnCTA" variant="secondary">
+              <h5>Sua busca por serviços de engenharia civil termina aqui!</h5>
+              <h3>STRUCT ENGENHARIA</h3>
+              <h4>Projetos e Assessoria Técnica</h4>
+              <ReactBootstrap.Button href="/Contato" className="btnCTA" variant="secondary">
                 Faça um orçamento
               </ReactBootstrap.Button>
             </div>
@@ -115,16 +114,7 @@ function Home() {
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Consultoria</h2>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  Oferecemos assessoria técnica em engenharia civil para atender as necessidades diversas de nossos clientes, buscando sempre a melhor alternativa seja qual for a questão. Aliamos sempre segurança, economia e praticidade, afinal, o mercado da construção civil atual exige cada vez mais para o sucesso de sua obra
                 </p>
                 <div className="btnSaibaMais">
                   <ReactBootstrap.Button variant="secondary">
@@ -156,16 +146,7 @@ function Home() {
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Desenvolvimento de Projetos</h2>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  Desenvolvemos Projeto Arquitetônico, Estrutural, Elétrico de baixa tensão, Hidrossanitário, Prevenção e Combate a Incêndio e Pânico e mais! Seja qual for a sua necessidade, entre em contato para saber como podemos te atender.
                 </p>
                 <div className="btnSaibaMais">
                   <ReactBootstrap.Button variant="secondary">
@@ -179,16 +160,7 @@ function Home() {
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Fiscalização de Obras</h2>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  Oferecemos o serviço de execução de obras, desde a elaboração do planejamento até a entrega final, sempre fiscalizando seu empreendimento para garantir o correto seguimento dos projetos, a aplicação das normas pertinentes e a execução segura dentro do menor prazo.
                 </p>
                 <div className="btnSaibaMais">
                   <ReactBootstrap.Button variant="secondary">
@@ -260,8 +232,8 @@ function Home() {
                 <ReactBootstrap.Image
                   className="imgSobre"
                   src={fotoEmpresa}
-                  alt=" Foto Empresa"
-                  title=" Foto Empresa"
+                  alt="Foto Empresa"
+                  title="Foto Empresa"
                 />
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
@@ -338,19 +310,17 @@ function Home() {
         </div>
       </section>
 
-      <div>
-        <a
-          href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
-          target="blank"
-        >
-          <img
-            className="fixedButton"
-            src={whatsapp}
-            alt="Whatsapp"
-            title="Whatsapp"
-          />
-        </a>
-      </div>
+      <a
+        href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
+        target="blank"
+      >
+        <img
+          className="fixedButton"
+          src={whatsapp}
+          alt="Whatsapp"
+          title="Whatsapp"
+        />
+      </a>
 
       <Footer></Footer>
     </>

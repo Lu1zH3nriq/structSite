@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     background-color: #354044;
-    min-height: 7vh;
+    min-height: 10vh;
     z-index: 1000;
   }
   .logo {

@@ -6,7 +6,7 @@ import "../styles/App.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import whatsapp from "../img/whatsapp3.png";
+import whatsapp from "../img/whatsapp3.webP";
 
 function contato() {
   return (

@@ -3,7 +3,7 @@ import * as ReactBootstrap from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
 
-import logo from "../img/logo_struct.png";
+import logo from "../img/logo_struct.webP";
 
 function header() {
   return (
