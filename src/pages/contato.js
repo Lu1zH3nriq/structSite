@@ -1,14 +1,49 @@
 import React from "react";
+import { useState } from "react";
 import * as ReactBootstrap from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/App.css";
+
+import emailjs from '@emailjs/browser';
 
 import Header from "../components/header";
 import Footer from "../components/footer";
 
 import whatsapp from "../img/whatsapp3.webP";
 
-function contato() {
+function Contato() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [assunto, setAssunto] = useState('')
+  const [message, setMessage] = useState('')
+
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    if(name === '' || email === '' || assunto === '' || message === '' ){
+      alert("É necessário preencher todos os campos!")
+      return
+    }
+
+    const templateParams = {
+      from_name: name,
+      assunto: assunto,
+      message: message,
+      email: email
+    }
+    emailjs.send("service_xzvqg29", "template_7xwlmz8" , templateParams, "zH9YAS0KtviBfAapZ")
+    .then( (response) => {
+      alert("EMAIL ENVIADO COM SUCESSO !")
+      setName('')
+      setEmail('')
+      setAssunto('')
+      setMessage('')  
+    }, (erro) => {
+      alert("EMAIL NÃO ENVIADO. ERRO INTERNO DO SERVIDOR. CONTATE O DESENVOLVEDOR !")
+    })
+  }
+
   return (
     <>
       <Header></Header>
@@ -18,7 +53,7 @@ function contato() {
           <ReactBootstrap.Container>
             <div className="containerForm">
               <h3>Envie um e-mail com sua mensagem </h3>
-              <ReactBootstrap.Form>
+              <ReactBootstrap.Form onSubmit={sendEmail}>
                 <ReactBootstrap.Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"
@@ -29,6 +64,8 @@ function contato() {
                   <ReactBootstrap.Form.Control
                     type="text"
                     placeholder="Seu nome"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
                   />
                 </ReactBootstrap.Form.Group>
 
@@ -42,6 +79,8 @@ function contato() {
                   <ReactBootstrap.Form.Control
                     type="email"
                     placeholder="email@exemplo.com.br"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
                   />
                 </ReactBootstrap.Form.Group>
 
@@ -55,6 +94,8 @@ function contato() {
                   <ReactBootstrap.Form.Control
                     type="text"
                     placeholder="Qual o assunto"
+                    onChange={(e) => setAssunto(e.currentTarget.value)}
+                    value={assunto}
                   />
                 </ReactBootstrap.Form.Group>
 
@@ -65,13 +106,18 @@ function contato() {
                   <ReactBootstrap.Form.Label>
                     Escreva sua mensagem:
                   </ReactBootstrap.Form.Label>
-                  <ReactBootstrap.Form.Control as="textarea" rows={3} />
+                  <ReactBootstrap.Form.Control as="textarea" rows={3}
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
+                  />
                 </ReactBootstrap.Form.Group>
+
+                <div className="btnEnviar">
+                  <input className="button" type="submit" value="Enviar" />
+                </div>
               </ReactBootstrap.Form>
 
-              <div className="btnEnviar">
-                <button>Enviar</button>
-              </div>
+
             </div>
           </ReactBootstrap.Container>
         </div>
@@ -95,4 +141,4 @@ function contato() {
   );
 }
 
-export default contato;
+export default Contato;

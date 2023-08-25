@@ -54,9 +54,10 @@ function Home() {
         <div className="fundoMainFrame">
           <ReactBootstrap.Container>
             <div className="textos">
-              <h5>Sua busca por serviços de engenharia civil termina aqui!</h5>
-              <h3>STRUCT ENGENHARIA</h3>
-              <h4>Projetos e Assessoria Técnica</h4>
+              <p>Sua busca por serviços de engenharia civil termina aqui!</p>
+              <h1>S T R U C T</h1>
+              <h3>ENGENHARIA</h3>
+              <h6>PROJETOS E ACESSORIA TÉCNICA</h6>
               <ReactBootstrap.Button href="/Contato" className="btnCTA" variant="secondary">
                 Faça um orçamento
               </ReactBootstrap.Button>
