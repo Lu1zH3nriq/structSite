@@ -134,21 +134,27 @@
   padding-top: 4em;
 }
 .colunaFooter{
-  text-align: justify;
+  text-align: center;
 }
 .colunaFooter img{
   height: auto;
-  width: 10vh;
+  width: 30vh;
   padding: 10px;
 }
 .colunaFooter h5, .colunaFooter p{
   color: #ffffff;
+}
+
+.colunaFooter p {
+  font-size: 0.8em; 
+  padding: 0;
 }
 .socialIcons {
   display: flex;
   flex-direction: column;
 }
 .socialIcons a {
+  padding: 5px;
   color: white; /* Cor do texto branca */
   text-decoration: none; /* Espaçamento entre os ícones */
 }

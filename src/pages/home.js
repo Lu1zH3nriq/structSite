@@ -6,18 +6,20 @@ import "../styles/App.css";
 import ScrollReveal from "scrollreveal";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import ClientLogoCarousel from "../components/ClientLogoCarousel";
 
 import consultoriaImg from "../img/consultoria.webP";
 import projetosImg from "../img/projetos.webP";
 import fiscalizacaoImg from "../img/fiscalizacao.webP";
 import fotoEmpresa from "../img/fotoEmpresa.webP";
-
-import fotoDepoimento1 from "../img/fotoDep1.webP";
-import fotoDepoimento2 from "../img/fotoDep2.webP";
-import fotoDepoimento3 from "../img/fotoDep3.webP";
 import whatsapp from "../img/whatsapp3.webP";
 
 function Home() {
+  const message = "Olá, tudo bem? Gostaria de saber mais sobre os serviços da Struct Engenharia. Poderia me ajudar?";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappLink = `https://wa.me/553175816475?text=${encodedMessage}`;
+
+
   useEffect(() => {
     const animacaoInicio = ScrollReveal({
       origin: "bottom",
@@ -40,7 +42,7 @@ function Home() {
       delay: 100,
       opacity: 0,
       easing: "ease",
-      reset: "true",
+      reset: "false",
     });
 
     animacaoServicos.reveal(".linhas");
@@ -48,7 +50,7 @@ function Home() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
 
       <section id="home">
         <div className="fundoMainFrame">
@@ -202,71 +204,19 @@ function Home() {
         </div>
       </section>
 
-      <section id="avaliacoes">
+      <section id="clientes">
         <div className="avContainer">
           <ReactBootstrap.Container>
-            <h3>Veja o que alguns de nossos clientes dizem </h3>
-
-            <div className="depoimentos">
-              <ReactBootstrap.Row className="linhaDepoimentos">
-                <ReactBootstrap.Col>
-                  <div className="depoimento">
-                    <ReactBootstrap.Image
-                      src={fotoDepoimento1}
-                      alt="Foto Depoimento 1"
-                      title="Foto Depoimento 1"
-                    />
-                    <h2>João</h2>
-                    <h5>CEO na empresa ASKDKAS</h5>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </ReactBootstrap.Col>
-
-                <ReactBootstrap.Col>
-                  <div className="depoimento">
-                    <ReactBootstrap.Image
-                      src={fotoDepoimento2}
-                      alt="Foto Depoimento 2"
-                      title="Foto Depoimento 2"
-                    />
-                    <h2>Maria</h2>
-                    <h5>Diretora Executiva na empresa askda</h5>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </ReactBootstrap.Col>
-
-                <ReactBootstrap.Col>
-                  <div className="depoimento">
-                    <ReactBootstrap.Image
-                      src={fotoDepoimento3}
-                      alt="Foto Depoimento 3"
-                      title="Foto Depoimento 3"
-                    />
-                    <h2>José</h2>
-                    <h5>Diretor de projetos na empresa askdk</h5>
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </ReactBootstrap.Col>
-              </ReactBootstrap.Row>
+            <h3>Nossos clientes </h3>
+            <div>
+              <ClientLogoCarousel />
             </div>
           </ReactBootstrap.Container>
         </div>
       </section>
 
       <a
-        href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
+        href={whatsappLink}
         target="blank"
       >
         <img
@@ -277,7 +227,7 @@ function Home() {
         />
       </a>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

@@ -30,9 +30,12 @@ function header() {
               <ReactBootstrap.Nav.Link className="headerFont" href="/#sobre">
                 Sobre
               </ReactBootstrap.Nav.Link>
-              <ReactBootstrap.Nav.Link className="headerFont" href="/Projetos">
-                Projetos
+              <ReactBootstrap.Nav.Link className="headerFont" href="/#clientes">
+                Clientes
               </ReactBootstrap.Nav.Link>
+              {/* <ReactBootstrap.Nav.Link className="headerFont" href="/Projetos">
+                Projetos
+              </ReactBootstrap.Nav.Link> */}
               <ReactBootstrap.Nav.Link className="headerFont" href="/Contato">
                 Contato
               </ReactBootstrap.Nav.Link>

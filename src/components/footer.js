@@ -5,10 +5,13 @@ import "../styles/App.css";
 import logo from "../img/logo.webP";
 import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
-
 function footer() {
 
   const anoAtual = new Date().getFullYear();
+  const message = "Olá, tudo bem? Gostaria de saber mais sobre os serviços da Struct Engenharia. Poderia me ajudar?";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappLink = `https://wa.me/553175816475?text=${encodedMessage}`;
+
 
   return (
     <footer>
@@ -30,10 +33,10 @@ function footer() {
               </ReactBootstrap.Col>
               <ReactBootstrap.Col className="colunaFooter">
                 <h5>Contato</h5>
-                <p>email.email@email.com</p>
-                <p>(XX) XXXX - XXXX </p>
+                <p>engenharia.struct@gmail.com</p>
+                <p>(55) 31 7581-6475</p>
                 <p>Rua teste, 981, Teste</p>
-                <p>Exemplo - MG</p>
+                <p>Belo Horizonte - MG</p>
               </ReactBootstrap.Col>
               <ReactBootstrap.Col className="colunaFooter">
                 <h5>Social</h5>
@@ -47,7 +50,7 @@ function footer() {
                   <a href="https://pt-br.facebook.com/login/device-based/regular/login/"
                     target="blank"
                   ><FaFacebook /> Facebook</a>
-                  <a href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
+                  <a href={whatsappLink}
                     target="blank"
                   ><FaWhatsapp /> Whatsapp</a>
                 </div>
