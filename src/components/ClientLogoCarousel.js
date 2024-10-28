@@ -3,14 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import clienteLogo1 from "../img/clienteLogo1.webP";
-import clienteLogo2 from "../img/clienteLogo2.webP";
-import clienteLogo3 from "../img/clienteLogo3.webP";
-import clienteLogo4 from "../img/clienteLogo4.webP";
-import clienteLogo5 from "../img/clienteLogo5.webP";
-import clienteLogo6 from "../img/clienteLogo6.webP";
-import clienteLogo7 from "../img/clienteLogo7.webP";
-import clienteLogo8 from "../img/clienteLogo8.webP";
+import alvoradaLogo from "../img/alvoradaLogo.jpeg";
+import brumLogo from "../img/broomLogo.jpeg";
+import carraoLogo from "../img/carraologo.jpeg";
+import metalLogo from "../img/metalogo.jpeg";
+import pontualLogo from "../img/pontualLogo.jpeg";
+import postoJambeiroLogo from "../img/postojambeiroLogo.jpeg";
+import ReMLogo from "../img/ReMLogo.jpeg";
 
 const ClientLogoCarousel = () => {
   const settings = {
@@ -48,38 +47,34 @@ const ClientLogoCarousel = () => {
 
   const logos = [
     {
-      img: clienteLogo1,
-      nome: "Cliente 1"
+      img: alvoradaLogo,
+      nome: "Alvorada Auto Peças"
     },
     {
-      img: clienteLogo2,
-      nome: "Cliente 2"
+      img: brumLogo,
+      nome: "Brum Wood Móveis Planejados"
     },
     {
-      img: clienteLogo3,
-      nome: "Cliente 3"
+      img: carraoLogo,
+      nome: "Carrão Auto Peças"
     },
     {
-      img: clienteLogo4,
-      nome: "Cliente 4"
+      img: metalLogo,
+      nome: "MetalArt Soluções em Aço"
     },
     {
-      img: clienteLogo5,
-      nome: "Cliente 5"
+      img: pontualLogo,
+      nome: "Pontual Peças e Acessórios"
     },
     {
-      img: clienteLogo6,
-      nome: "Cliente 6"
+      img: postoJambeiroLogo,
+      nome: "Posto Jambeiro"
     },
     {
-      img: clienteLogo7,
-      nome: "Cliente 7"
+      img: ReMLogo,
+      nome: "R&M Estruturas Metálicas"
     },
-    {
-      img: clienteLogo8,
-      nome: "Cliente 8"
-    }
-  ]; // Substitua com os caminhos das logos dos seus clientes
+  ];
 
   return (
     <div style={{ padding: '5% 0% 10% 0%' }}>
@@ -96,8 +91,8 @@ const ClientLogoCarousel = () => {
                 style={{
                   width: "80%",
                   height: "80%",
-                  maxWidth: "100px",
-                  maxHeight: "100px",
+                  minHeight: "120px",
+                  maxHeight: "120px",
                   objectFit: "contain"
                 }} />
             </div>
@@ -106,7 +101,9 @@ const ClientLogoCarousel = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }} >
-              <p>{logo.nome}</p>
+              <p style={{
+                color: '#354044',
+              }} >{logo.nome}</p>
             </div>
           </>
         ))}

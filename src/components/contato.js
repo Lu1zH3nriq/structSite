@@ -1,26 +1,21 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as ReactBootstrap from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/App.css";
 
 import emailjs from '@emailjs/browser';
 
-import Header from "../components/header";
-import Footer from "../components/footer";
 
-import whatsapp from "../img/whatsapp3.webP";
-
-function Contato() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [assunto, setAssunto] = useState('')
-  const [message, setMessage] = useState('')
+function ContatoModal({ show, handleClose, _message, _assunto }) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [assunto, setAssunto] = useState(_assunto ? _assunto : '');
+  const [message, setMessage] = useState(_message ? _message : '');
   const [preferContact, setPreferContact] = useState({
     call: false,
     whatsapp: false
-  })
+  });
   const [confirmation, setConfirmation] = useState({
     state: false,
     message: '',
@@ -36,7 +31,7 @@ function Contato() {
         message: 'Para enviar o email, é necessário preencher todas as informações do formulário.',
         type: 'error'
       });
-      return
+      return;
     }
 
     const templateParams = {
@@ -46,7 +41,7 @@ function Contato() {
       email: email,
       phone: phone,
       prefer_contact: `Ligação: ${preferContact.call === true ? 'SIM' : 'NÃO'}, Whatsapp: ${preferContact.whatsapp === true ? 'SIM' : 'NÃO'}`
-    }
+    };
 
     emailjs.send("service_ozgwcfc", "template_zp6r2g4", templateParams, 'AWaJPfAuf6zANoZN7')
       .then((response) => {
@@ -55,28 +50,36 @@ function Contato() {
           message: 'Seu email foi enviado com sucesso! Entraremos em contato em breve com mais informações.',
           type: 'success'
         });
-        setName('')
-        setEmail('')
-        setPhone('')
-        setAssunto('')
-        setMessage('')
-        setPreferContact({ call: false, whatsapp: false })
+        setName('');
+        setEmail('');
+        setPhone('');
+        setAssunto('');
+        setMessage('');
+        setPreferContact({ call: false, whatsapp: false });
       }, (erro) => {
-        console.log(erro)
+        console.log(erro);
         setConfirmation({
           state: true,
           message: 'Ocorreu um erro ao enviar seu email. Tente novamente mais tarde.',
           type: 'error'
         });
-      })
+      });
   }
+
+  useEffect(() => {
+    if (_assunto && _message) {
+      setAssunto(_assunto);
+      setMessage(_message);
+    }
+  }, [show]);
 
   return (
     <>
-      <Header></Header>
-
-      <section id="contato">
-        <div className="formContato">
+      <ReactBootstrap.Modal show={show} onHide={handleClose} centered size="xl">
+        <ReactBootstrap.Modal.Header closeButton>
+          <ReactBootstrap.Modal.Title>{_assunto ? `Detalhs sobre ${_assunto}` : 'Entrar em contato'}</ReactBootstrap.Modal.Title>
+        </ReactBootstrap.Modal.Header>
+        <ReactBootstrap.Modal.Body>
           <ReactBootstrap.Container>
             <div className="containerForm">
               <h3 style={{
@@ -84,17 +87,12 @@ function Contato() {
                 marginBottom: "40px",
                 fontSize: "2rem",
                 fontWeight: "semibold"
-              }}>Envie um e-mail com sua mensagem </h3>
+              }}>Envie um e-mail com sua mensagem</h3>
               <ReactBootstrap.Form onSubmit={sendEmail}>
                 <ReactBootstrap.Row>
                   <ReactBootstrap.Col xs={12} md={4}>
-                    <ReactBootstrap.Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput1"
-                    >
-                      <ReactBootstrap.Form.Label>
-                        Digite seu nome:
-                      </ReactBootstrap.Form.Label>
+                    <ReactBootstrap.Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                      <ReactBootstrap.Form.Label>Digite seu nome:</ReactBootstrap.Form.Label>
                       <ReactBootstrap.Form.Control
                         type="text"
                         placeholder="Seu nome"
@@ -105,13 +103,8 @@ function Contato() {
                   </ReactBootstrap.Col>
 
                   <ReactBootstrap.Col xs={12} md={4}>
-                    <ReactBootstrap.Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput1"
-                    >
-                      <ReactBootstrap.Form.Label>
-                        Digite seu telefone:
-                      </ReactBootstrap.Form.Label>
+                    <ReactBootstrap.Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                      <ReactBootstrap.Form.Label>Digite seu telefone:</ReactBootstrap.Form.Label>
                       <ReactBootstrap.Form.Control
                         type="text"
                         placeholder="Seu telefone"
@@ -122,13 +115,8 @@ function Contato() {
                   </ReactBootstrap.Col>
 
                   <ReactBootstrap.Col xs={12} md={4}>
-                    <ReactBootstrap.Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput1"
-                    >
-                      <ReactBootstrap.Form.Label>
-                        Preferir contato:
-                      </ReactBootstrap.Form.Label>
+                    <ReactBootstrap.Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                      <ReactBootstrap.Form.Label>Preferir contato:</ReactBootstrap.Form.Label>
                       <div>
                         <ReactBootstrap.Form.Check
                           inline
@@ -149,13 +137,8 @@ function Contato() {
                   </ReactBootstrap.Col>
                 </ReactBootstrap.Row>
 
-                <ReactBootstrap.Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <ReactBootstrap.Form.Label>
-                    Digite seu email:
-                  </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <ReactBootstrap.Form.Label>Digite seu email:</ReactBootstrap.Form.Label>
                   <ReactBootstrap.Form.Control
                     type="email"
                     placeholder="email@exemplo.com.br"
@@ -164,13 +147,8 @@ function Contato() {
                   />
                 </ReactBootstrap.Form.Group>
 
-                <ReactBootstrap.Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <ReactBootstrap.Form.Label>
-                    Informe o assunto:
-                  </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <ReactBootstrap.Form.Label>Informe o assunto:</ReactBootstrap.Form.Label>
                   <ReactBootstrap.Form.Control
                     type="text"
                     placeholder="Qual o assunto"
@@ -179,43 +157,25 @@ function Contato() {
                   />
                 </ReactBootstrap.Form.Group>
 
-                <ReactBootstrap.Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <ReactBootstrap.Form.Label>
-                    Escreva sua mensagem:
-                  </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <ReactBootstrap.Form.Label>Escreva sua mensagem:</ReactBootstrap.Form.Label>
                   <ReactBootstrap.Form.Control as="textarea" rows={3}
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
                   />
                 </ReactBootstrap.Form.Group>
 
+
                 <div className="btnEnviar">
-                  <input className="button" type="submit" value="Enviar" />
+                  <ReactBootstrap.Button variant="primary" type="submit">
+                    Enviar
+                  </ReactBootstrap.Button>
                 </div>
               </ReactBootstrap.Form>
             </div>
           </ReactBootstrap.Container>
-        </div>
-      </section>
-
-      <div>
-        <a
-          href="https://wa.me/553175816475?text=Ol%C3%A1%2C+tudo+bem%3F++Mensagem+de+sauda%C3%A7%C3%A3o%3B+"
-          target="blank"
-        >
-          <img
-            className="fixedButton"
-            src={whatsapp}
-            alt="Whatsapp"
-            title="Whatsapp"
-          />
-        </a>
-      </div>
-
-
+        </ReactBootstrap.Modal.Body>
+      </ReactBootstrap.Modal>
 
       <ReactBootstrap.Modal
         show={confirmation.state}
@@ -230,13 +190,13 @@ function Contato() {
         <ReactBootstrap.Modal.Body>{confirmation.message}</ReactBootstrap.Modal.Body>
         <ReactBootstrap.Modal.Footer>
           <ReactBootstrap.Button variant="primary" onClick={() => {
-            setConfirmation({ state: false, message: '', type: '' })
-          }} >Confirmar</ReactBootstrap.Button>
+            setConfirmation({ state: false, message: '', type: '' });
+          }}>Confirmar</ReactBootstrap.Button>
         </ReactBootstrap.Modal.Footer>
       </ReactBootstrap.Modal>
-      <Footer></Footer>
+
     </>
   );
 }
 
-export default Contato;
+export default ContatoModal;

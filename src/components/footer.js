@@ -35,21 +35,21 @@ function footer() {
                 <h5>Contato</h5>
                 <p>engenharia.struct@gmail.com</p>
                 <p>(55) 31 7581-6475</p>
-                <p>Rua teste, 981, Teste</p>
+                
                 <p>Belo Horizonte - MG</p>
               </ReactBootstrap.Col>
               <ReactBootstrap.Col className="colunaFooter">
                 <h5>Social</h5>
                 <div className="socialIcons">
-                  <a href="https://www.instagram.com/"
+                  <a href="https://www.instagram.com/engenharia.struct/"
                     target="blank"
                   ><FaInstagram /> Instagram</a>
-                  <a href="https://br.linkedin.com/"
+                  {/* <a href="https://br.linkedin.com/"
                     target="blank"
                   ><FaLinkedin /> linkedIn</a>
-                  <a href="https://pt-br.facebook.com/login/device-based/regular/login/"
+                  <a href="https://pt-br.facebook.com/"
                     target="blank"
-                  ><FaFacebook /> Facebook</a>
+                  ><FaFacebook /> Facebook</a> */}
                   <a href={whatsappLink}
                     target="blank"
                   ><FaWhatsapp /> Whatsapp</a>
