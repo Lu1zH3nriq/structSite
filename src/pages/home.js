@@ -80,7 +80,7 @@ function Home() {
               <p>Sua busca por serviços de engenharia civil termina aqui!</p>
               <h1>S T R U C T</h1>
               <h3>ENGENHARIA</h3>
-              <h6>PROJETOS E ACESSORIA TÉCNICA</h6>
+              <h6>PROJETOS E ASSESSORIA TÉCNICA</h6>
               <ReactBootstrap.Button className="btnCTA" variant="secondary" onClick={() => {
                 setViewModalContato({
                   visible: true,
@@ -152,7 +152,7 @@ function Home() {
 
             <ReactBootstrap.Row className="linhas">
               <ReactBootstrap.Col className="colunaTxt">
-                <h2>Fiscalização de Obras</h2>
+                <h2>Acompanhamento e Execução de Obras</h2>
                 <p>
                   Oferecemos o serviço de execução de obras, desde a elaboração do planejamento até a entrega final, sempre fiscalizando seu empreendimento para garantir o correto seguimento dos projetos, a aplicação das normas pertinentes e a execução segura dentro do menor prazo.
                 </p>
