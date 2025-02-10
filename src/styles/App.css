@@ -59,9 +59,7 @@
   align-items: center;
 }
 .colunaImgDir .img, .colunaImgEsq .img{
-  min-width: 50vh;
-  max-width: 80vh;
-  height: auto;
+  max-width: 35vw;
   border-radius: 1em;
 }
 .imgSobre{
