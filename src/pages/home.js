@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootstrap from "react-bootstrap";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import "../styles/App.css";
 
-import ScrollReveal from "scrollreveal";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import ClientLogoCarousel from "../components/ClientLogoCarousel";
@@ -27,37 +28,11 @@ function Home() {
     assunto: ''
   });
 
-
   useEffect(() => {
-    const animacaoInicio = ScrollReveal({
-      origin: "bottom",
-      distance: "30px",
-      duration: 1000,
-      delay: 100,
-      opacity: 0,
-      easing: "ease",
-      reset: "true",
-    });
-
-    animacaoInicio.reveal(".textos");
-  }, []);
-
-  useEffect(() => {
-    const animacaoServicos = ScrollReveal({
-      origin: "bottom",
-      distance: "30px",
-      duration: 1000,
-      delay: 100,
-      opacity: 0,
-      easing: "ease",
-      reset: "false",
-    });
-
-    animacaoServicos.reveal(".linhas");
+    AOS.init({ duration: 1000 });
   }, []);
 
   function handleSelectService(service) {
-
     const messageService = message + ` Gostaria de informações sobre o serviço de ${service}`;
     const assunt = service;
 
@@ -66,17 +41,28 @@ function Home() {
       message: messageService,
       assunto: assunt
     });
-
   }
 
   return (
     <>
       <Header />
+      <a
+        data-aos="zoom-in"
+        href={whatsappLink}
+        target="blank"
+      >
+        <img
+          className="fixedButton"
+          src={whatsapp}
+          alt="Whatsapp"
+          title="Whatsapp"
+        />
+      </a>
 
       <section id="home">
         <div className="fundoMainFrame">
           <ReactBootstrap.Container>
-            <div className="textos">
+            <div className="textos" data-aos="fade-up">
               <p>Sua busca por serviços de engenharia civil termina aqui!</p>
               <h1>S T R U C T</h1>
               <h3>ENGENHARIA</h3>
@@ -100,7 +86,7 @@ function Home() {
           <div className="projetosContainer">
             <h3>Serviços</h3>
 
-            <ReactBootstrap.Row className="linhas">
+            <ReactBootstrap.Row className="linhas" data-aos="fade-right">
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Consultoria</h2>
                 <p>
@@ -125,7 +111,7 @@ function Home() {
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
 
-            <ReactBootstrap.Row className="linhas ">
+            <ReactBootstrap.Row className="linhas " data-aos="fade-left">
               <ReactBootstrap.Col className="colunaImgEsq">
                 <ReactBootstrap.Image
                   className="img"
@@ -150,7 +136,7 @@ function Home() {
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
 
-            <ReactBootstrap.Row className="linhas">
+            <ReactBootstrap.Row className="linhas" data-aos="fade-right">
               <ReactBootstrap.Col className="colunaTxt">
                 <h2>Acompanhamento e Execução de Obras</h2>
                 <p>
@@ -187,7 +173,7 @@ function Home() {
               width: "80%",
               margin: "0 auto",
               textAlign: "center"
-            }}>
+            }} data-aos="fade-up">
               <ReactBootstrap.Col className="colunaTxtSobre">
                 <h2>Struct Engenharia</h2>
                 <p>
@@ -222,28 +208,14 @@ function Home() {
         <div className="avContainer">
           <ReactBootstrap.Container>
             <h3>Nossos clientes </h3>
-            <div>
+            <div data-aos="zoom-in">
               <ClientLogoCarousel />
             </div>
           </ReactBootstrap.Container>
         </div>
       </section>
 
-      <a
-        href={whatsappLink}
-        target="blank"
-      >
-        <img
-          className="fixedButton"
-          src={whatsapp}
-          alt="Whatsapp"
-          title="Whatsapp"
-        />
-      </a>
-
       <Footer />
-
-
 
       <ContatoModal
         show={viewModalContato.visible}
